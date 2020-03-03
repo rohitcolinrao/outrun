@@ -31,4 +31,4 @@
 ** git clone <urlOfRepository>
 ** git status
 ** git add .
-** 
+** git commit -m "description of commit"
