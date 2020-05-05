@@ -1,45 +1,32 @@
 import React from "react"
-import {TextField, Button} from "@material-ui/core"
-
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Home from "./components/Home"
 import "./App.css"
 
-// function App() {
-//   console.log("functional component called")
-//   return (
-//     <div>
-//       Hello this is a clean fresh react app.
-//       <br/>
-//       <button>Hello</button>
-//       <br/>
-//       <br/>
-//       <TextField id="standard-basic" label="Username" />
-//       <br/>
-//       <Button variant="contained" color="primary"> LOGIN </Button>
-//     </div>
-//   );
-// }
 
-class App extends React.Component {
-  constructor(props){
-    super(props)
+function App() {
+  console.log("functional component called")
 
-    console.log("The constructor for the App Component has been called")
-
+  const menuItems = {
+    nav1: "Home",
+    nav2: "Products",
+    nav3: "About Us"
   }
-  render(){
-    return (
-      <div>
-        Hello this is a clean fresh react app.
-        <br/>
-        <button>Hello</button>
-        <br/>
-        <br/>
-        <TextField id="standard-basic" label="Username" />
-        <br/>
-        <Button variant="contained" color="primary"> LOGIN </Button>
-      </div>
-    );
-  }
+
+  return (
+
+    <div>
+
+      <Header  title="HEADING1" nav={menuItems} />
+
+      <Home initialCount="15" />
+
+      <Footer />
+
+    </div>
+
+  )
 }
 
 export default App;
