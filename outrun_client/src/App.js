@@ -1,32 +1,41 @@
 import React from "react"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Home from "./components/Home"
+import Home from "./containers/Home"
+import Products from "./containers/Products"
+import About from "./containers/About"
 import "./App.css"
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
 
 
 function App() {
-  console.log("functional component called")
 
-  const menuItems = {
-    nav1: "Home",
-    nav2: "Products",
-    nav3: "About Us"
-  }
 
   return (
 
-    <div>
+    <Router>
+      <Switch>
 
-      <Header  title="HEADING1" nav={menuItems} />
+        <Route path="/products">
+          <Products/>
+        </Route>
 
-      <Home initialCount="15" />
+        <Route path="/about">
+          <About/>
+        </Route>
 
-      <Footer />
+        <Route path="/">
+          <Home/>
+        </Route>
 
-    </div>
-
+      </Switch>
+    </Router>
   )
 }
 
-export default App;
+export default App
+
+

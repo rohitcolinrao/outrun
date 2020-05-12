@@ -1,4 +1,8 @@
 import React from "react"
+import {
+  Link
+} from "react-router-dom"
+
 
 function Header(props) {
 
@@ -8,11 +12,11 @@ function Header(props) {
         {props.title}
       </div>
       <div>
-        {props.nav.nav1} 
+        <Link to="/">Home</Link>
         | 
-        {props.nav.nav2}
+        <Link to="/products">Products</Link>
         |
-        {props.nav.nav3}
+        <Link to="/about">About</Link>
       </div>
     </div>
     

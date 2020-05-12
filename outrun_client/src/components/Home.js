@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import {TextField, Button} from "@material-ui/core"
 
-class Home extends Component {
+class HomeComp extends Component {
 
   constructor(props){
     super(props)
@@ -48,4 +48,4 @@ class Home extends Component {
   
 }
 
-export default Home;
+export default HomeComp;
